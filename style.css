@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #027373;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color:#172026;
+    padding: 10px;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    direction: rtl;
+}
+
+.Class {
+    max-width: 800px;
+    margin: 30px auto;
+    background:#172026 ;
+    padding: 30px;
+}
+
+h1{
+    color:#027373;
+}
+h2 {
+    color:#E08C00; 
+}
+h3 {
+    color:#027373;   
+}
+p {
+    color:#5FCDD9;
+}
+ul {
+    color: #5FCDD9;
+    text-align: right;
+}
+
+.card{
+    background:#172026;
+    padding: 15px;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.buy {
+    background-color: #04BFAD;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+
