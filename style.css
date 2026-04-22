@@ -28,16 +28,21 @@ header {
 
 h1{
     color:#027373;
+    text-align: center;
 }
+
 h2 {
     color:#E08C00; 
 }
+
 h3 {
     color:#027373;   
 }
+
 p {
     color:#5FCDD9;
 }
+
 ul {
     color: #5FCDD9;
     text-align: right;
@@ -56,8 +61,30 @@ ul {
     background-color: #04BFAD;
     color: white;
     border: none;
-    padding: 10px 10px;
+    padding: 10px 20px;
     font-size: 20px;
+    border-radius: 20px;
 }
 
+.link{
+    background-color: #04BFAD;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+img{
+    width: 60%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+video{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
 
