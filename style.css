@@ -6,11 +6,12 @@ body {
 }
 
 header {
-    background-color:#172026;
+    background-color: #172026;
     padding: 10px;
+
 }
 
-.main{
+.main {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -22,25 +23,25 @@ header {
 .Class {
     max-width: 800px;
     margin: 30px auto;
-    background:#172026 ;
+    background: #172026;
     padding: 30px;
 }
 
-h1{
-    color:#027373;
+h1 {
+    color: #027373;
     text-align: center;
 }
 
 h2 {
-    color:#E08C00; 
+    color: #E08C00;
 }
 
 h3 {
-    color:#027373;   
+    color: #027373;
 }
 
 p {
-    color:#5FCDD9;
+    color: #5FCDD9;
 }
 
 ul {
@@ -48,8 +49,8 @@ ul {
     text-align: right;
 }
 
-.card{
-    background:#172026;
+.card {
+    background: #172026;
     padding: 15px;
     width: calc(50% - 20px);
     box-sizing: border-box;
@@ -66,7 +67,16 @@ ul {
     border-radius: 20px;
 }
 
-.link{
+.buy:hover{
+    background-color:  #04BFAD;
+    box-shadow: 0 0 5px #00e5bc;
+}
+
+a {
+    text-decoration: none;
+}
+
+.link {
     background-color: #04BFAD;
     color: white;
     border: none;
@@ -75,16 +85,98 @@ ul {
     border-radius: 20px;
 }
 
-img{
+.link:hover{
+    background-color:  #04BFAD;
+    box-shadow: 0 0 5px #00e5bc;
+}
+
+img {
     width: 60%;
     height: auto;
     margin: 20px auto;
     border-radius: 20px;
 }
 
-video{
+video {
     width: 100%;
     height: auto;
     border-radius: 20px;
 }
 
+
+.Return {
+    position: absolute;
+}
+
+.mas {
+    padding-top: 5px;
+    background: #172026;
+}
+
+.maa {
+    width: 100%;
+    display: block;
+}
+
+.mad {
+    width: 100%;
+    contain: size strict;
+}
+
+.CvDJxb {
+    width: 100%;
+    z-index: 128;
+    position: relative;
+    padding: 5px 0;
+    overflow-x: clip;
+    background: #172026;
+}
+
+.YNk70c {
+    grid-template-columns: minmax(0, 1fr) repeat(16, 36px) minmax(0, 1fr);
+}
+
+.NDnoQ {
+    display: flex;
+    justify-content: space-between;
+}
+
+.P3mIxe {
+    grid-column: 2 / -1;
+}
+
+.A8SBwf {
+    margin-right: 136px;
+    width: calc(100% - 136px);
+}
+
+.logo {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    padding: 4px 24px 0 44px;
+    right: -20px;
+}
+
+.login-btu {
+    background-color: #04BFAD;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.login-btu:hover {
+    background-color:  #04BFAD;
+    box-shadow: 0 0 5px #00e5bc;
+}
+
+.login-container {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    margin-left:5px;   
+}
