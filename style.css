@@ -30,6 +30,10 @@ header {
   
 }
 
+label{
+    color: white;
+}
+
 h1 {
     color: #027373;
     text-align: center;
@@ -192,4 +196,100 @@ video {
     display: flex;
     align-items: center;
     margin-left:5px;   
+}
+
+.lo-jf{
+    background: #172026;
+    padding: 35px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 380px;
+
+}
+
+.login-div {
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;          
+    
+    margin: 0;
+}
+.login-h2{
+    color: #ff9f43; 
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+.login-b{
+    text-align: center; 
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.logboy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+
+.input-group label {
+    display: block;
+    color: #ffffff; 
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.options a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.login-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #ff9f43; 
+    color: #172227;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: background 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #e68a35;
 }

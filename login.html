@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="login-div">
+        
+        <form class="lo-jf">
+            <h2 class="login-h2">Login</h2>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required placeholder="username">
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required placeholder="password">
+            </div>
+            
+            <div class="options">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            
+            <a href="index.html" class="login-btn">Login</a>
+        </form>
+    </div>
+
+    <script>
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+
+        usernameInput.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                passwordInput.focus();  
+            }
+        });
+    </script>
 </body>
 </html>
