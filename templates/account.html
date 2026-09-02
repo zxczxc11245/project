@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="account-container">
+
+        <div class="account-header">
+            <img src="{{ url_for('static', filename='ph1.jfif') }}" alt="Profile" class="profile-img">
+            <div class="username">{{ user }}</div>
+        </div>
+
+        <div class="section-title">
+            <span>Password</span>
+            <a href="" class="edit-btn" title="Change password">✎</a>
+        </div>
+
+        <a href="/" class="back-link">Back to Home</a>
+
+    </div>
+</body>
+</html>

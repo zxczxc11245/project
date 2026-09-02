@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="login-div">
         
-        <form class="lo-jf">
+        <form class="lo-jf" action="/login" method="POST">
             <h2 class="login-h2">Login</h2>
+
+            {% if error %}
+                <p class="error-msg">{{ error }}</p>
+            {% endif %}
+
             <div class="input-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" required placeholder="username">
+                <input type="text" id="username" name="username" required placeholder="username">
             </div>
             
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" required placeholder="password">
+                <input type="password" id="password" name="password" required placeholder="password">
             </div>
             
             <div class="options">
@@ -26,7 +31,11 @@
                 <a href="#">Forgot Password?</a>
             </div>
             
-            <a href="index.html" class="login-btn">Login</a>
+            <button type="submit" class="login-btn">Login</button>
+
+            <div class="login-b">
+                Don't have an account? <a href="{{ url_for('signup') }}">Sign Up</a>
+            </div>
         </form>
     </div>
 

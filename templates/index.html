@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course.com</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="/">
+                <h1>Course.com</h1>
+            </a>
+        </div>
+
+        <div class="login-container">
+            {% if session.get('user') %}
+                <div class="user-box">
+                    <a href="{{ url_for('account') }}" class="account_link">
+                        <img src="{{ url_for('static', filename='ph1.jfif') }}" alt="Profile" class="profile-img">
+                    </a>
+                    <a href="{{ url_for('logout') }}" class="logout-btn">logout</a>
+                </div>
+            {% else %}
+                <a href="{{ url_for('login') }}" class="login-btu">login</a>
+                <a href="{{ url_for('signup') }}" class="login-btu">signup</a>
+            {% endif %}
+        </div>
+    </header>
+
+    <main class="main">
+        {% for course in courses %}
+        <div class="card">
+            <img src="{{ course['image_url'] }}" alt="{{ course['title'] }}">
+            <div>
+                <h2>{{ course['title'] }}</h2>
+                <p>{{ course['description'] }}</p>
+                <a href="{{ url_for('course_detail', course_id=course['id']) }}" class="link">More details</a>
+            </div>
+        </div>
+        {% endfor %}
+    </main>
+
+</body>
+
+</html>

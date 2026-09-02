@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="/">
+                <h1>Course.com</h1>
+            </a>
+        </div>
+
+        <div class="login-container">
+            {% if session.get('user') %}
+            <div class="user-box">
+                <a href="{{ url_for('account') }}">
+                    <img src="{{ url_for('static', filename='ph1.jfif') }}" alt="Profile" class="profile-img">
+                </a>
+                <a href="{{ url_for('logout') }}" class="logout-btn">logout</a>
+            </div>
+            {% else %}
+            <a href="{{ url_for('login') }}" class="login-btu">login</a>
+            <a href="{{ url_for('signup') }}" class="login-btu">signup</a>
+            {% endif %}
+        </div>
+    </header>
+
+    <main class="Class">
+        <section>
+            <div>
+                <h2>Python language</h2>
+                <video autoplay loop muted playsinline class="video"
+                    src="{{ url_for('static', filename='v/c2.mp4') }}"></video>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>description</h3>
+            <p>Python is more than just a programming language; it's a powerful tool that opens up vast possibilities in
+                artificial
+                intelligence, data analysis, and web development. This course is designed to be your comprehensive guide
+                to learning Python from scratch, using a simplified, practical
+                approach that avoids unnecessary complexity.</p>
+
+            <h3>What will you learn?</h3>
+            <ul>
+                <li>Python basics.</li>
+                <li>Data operator.</li>
+                <li>Building real programs.</li>
+            </ul>
+        </section>
+
+
+        <button class="buy">Buy now</button>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,473 @@
+/* ============================================= */
+/* Base / General
+/* ============================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #027373;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+label {
+    color: white;
+}
+
+h1 {
+    color: #027373;
+    text-align: center;
+}
+
+h2 {
+    color: #E08C00;
+}
+
+h3 {
+    color: #027373;
+}
+
+p {
+    color: #5FCDD9;
+}
+
+ul {
+    color: #5FCDD9;
+    text-align: right;
+}
+
+img {
+    width: 60%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+
+/* ============================================= */
+/* Header
+/* ============================================= */
+
+header, .main-header {
+    background-color: #172026;
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px 30px !important;
+    height: 100px !important;
+}
+
+header.main-header .logo h1 {
+    margin: 25px !important;
+    color: #00b4d8 !important;
+    font-size: 40px !important;
+}
+
+.logo {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    padding: 4px 24px 0 44px;
+    right: -20px;
+}
+
+.login-btu {
+    background-color: #04BFAD;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.login-btu:hover {
+    background-color:  #04BFAD;
+    box-shadow: 0 0 5px #00e5bc;
+}
+
+.login-container {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    margin-left:5px;   
+}
+
+
+/* ============================================= */
+/* Layout / Main Content
+/* ============================================= */
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    direction: rtl;
+}
+
+.Class {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #172026;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border-radius: 15px;
+}
+
+.mas {
+    padding-top: 5px;
+    background: #172026;
+}
+
+.maa {
+    width: 100%;
+    display: block;
+}
+
+.mad {
+    width: 100%;
+    contain: size strict;
+}
+
+.Cv {
+    width: 100%;
+    z-index: 128;
+    position: relative;
+    padding: 5px 0;
+    overflow-x: clip;
+    background: #172026;
+}
+
+.Y {
+    grid-template-columns: minmax(0, 1fr) repeat(16, 36px) minmax(0, 1fr);
+}
+
+.ND {
+    display: flex;
+    justify-content: space-between;
+}
+
+.P3 {
+    grid-column: 2 / -1;
+}
+
+.A8 {
+    margin-right: 136px;
+    width: calc(100% - 136px);
+}
+
+.Return {
+    position: absolute;
+}
+
+
+/* ============================================= */
+/* Cards / Buttons
+/* ============================================= */
+
+.card {
+    background: #172026;
+    padding: 15px;
+    width: calc(30% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  transition: 0.3s;
+}
+
+.buy {
+    background-color: #04BFAD;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.buy:hover{
+    background-color:  #04BFAD;
+    box-shadow: 0 0 5px #00e5bc;
+}
+
+.link {
+    background-color: #04BFAD;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.link:hover{
+    background-color:  #04BFAD;
+    box-shadow: 0 0 5px #00e5bc;
+}
+
+
+/* ============================================= */
+/* Login / Signup Forms
+/* ============================================= */
+
+.login-div {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;          
+    margin: 0;
+}
+
+.logboy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.lo-jf{
+    background: #172026;
+    padding: 35px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 380px;
+}
+
+.login-h2{
+    color: #ff9f43; 
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.login-b{
+    text-align: center; 
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    color: #ffffff; 
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.options a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.login-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #ff9f43; 
+    color: #172227;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: background 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #e68a35;
+}
+
+.error-msg {
+    background-color: rgba(224, 140, 0, 0.15);
+    color: #E08C00;
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* ملاحظة: هذا التعريف الثاني لـ .login-container يبقى بعد الأول
+   بنفس الترتيب الأصلي لأنه هو من يتفوّق فعلياً ويحدد الشكل الحالي */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+
+/* ============================================= */
+/* User Box (Header - logged in state)
+/* ============================================= */
+
+.user-box {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 3px !important;
+}
+
+.user-box .profile-img {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 2px solid #00b4d8 !important;
+    display: block !important;
+    margin: 0 !important;
+}
+
+.user-box .logout-btn {
+    background-color: #04BFAD !important;
+    color: white !important;
+    padding: 4px 9px !important;
+    border-radius: 5px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+    display: block !important;
+    margin: 25px !important;
+}
+
+.user-box .logout-btn:hover {
+    background-color: #04BFAD !important;
+    box-shadow: 0 0 5px #00e5bc !important;
+}
+
+
+/* ============================================= */
+/* Account Page
+/* ============================================= */
+
+.account-container {
+    max-width: 500px;
+    margin: 60px auto;
+    background: #172026;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.account-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.account-container .profile-img {
+    width: 90px !important;
+    height: 90px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 3px solid #00b4d8 !important;
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+.account-container .username {
+    margin-top: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.account-container .section-title {
+    font-size: 18px;
+    margin: 20px 0 10px;
+    color: #5FCDD9;
+    border-bottom: 2px solid #2a3944;
+    padding-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.account-container .edit-btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #04BFAD;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.account-container .edit-btn:hover {
+    background-color: #04BFAD;
+    box-shadow: 0 0 5px #00e5bc;
+}
+
+.account-container .back-link {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: #04BFAD;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.account-container .back-link:hover {
+    text-decoration: underline;
+}
