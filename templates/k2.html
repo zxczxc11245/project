@@ -36,7 +36,7 @@
         <section>
             <div>
                 <h2>Python language</h2>
-                <video autoplay loop muted playsinline class="video"
+                <video autoplay loop muted playsinline
                     src="{{ url_for('static', filename='v/c2.mp4') }}"></video>
             </div>
         </section>
@@ -60,7 +60,9 @@
         </section>
 
 
-        <button class="buy">Buy now</button>
+        <form action="{{ url_for('enroll', course_id=2) }}" method="post">
+            <button type="submit" class="buy">Buy now</button>
+        </form>
     </main>
 
 </body>

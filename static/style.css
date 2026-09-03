@@ -334,8 +334,7 @@ header.main-header .logo h1 {
     font-size: 14px;
 }
 
-/* ملاحظة: هذا التعريف الثاني لـ .login-container يبقى بعد الأول
-   بنفس الترتيب الأصلي لأنه هو من يتفوّق فعلياً ويحدد الشكل الحالي */
+
 .login-container {
     display: flex;
     flex-direction: column;
@@ -470,4 +469,34 @@ header.main-header .logo h1 {
 
 .account-container .back-link:hover {
     text-decoration: underline;
+}
+
+.enrolled-courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.enrolled-course-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 13px;
+}
+
+.enrolled-course-card img {
+    width: 80px !important;
+    height: 80px !important;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 0 6px 0 !important;
+}
+
+.enrolled-course-card:hover {
+    opacity: 0.85;
 }

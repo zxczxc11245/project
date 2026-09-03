@@ -21,6 +21,16 @@ def init_db():
             password TEXT NOT NULL
         )
     """)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS enrollments (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id INTEGER NOT NULL,
+            course_id INTEGER NOT NULL,
+            FOREIGN KEY (user_id) REFERENCES users(id),
+            FOREIGN KEY (course_id) REFERENCES courses(id),
+            UNIQUE(user_id, course_id)
+        )
+    """)
     conn.commit()
     conn.close()
 
@@ -41,6 +51,28 @@ def index():
 @app.route("/course/<int:course_id>")
 def course_detail(course_id):
     return render_template(f"k{course_id}.html")
+
+# كلاسات و الاشتراك
+
+@app.route("/enroll/<int:course_id>", methods=["POST"])
+def enroll(course_id):
+    if not session.get("user"):
+        return redirect(url_for("login"))
+
+    conn = get_db_connection()
+
+    user = conn.execute(
+        "SELECT * FROM users WHERE username = ?", (session["user"],)
+    ).fetchone()
+
+    conn.execute(
+        "INSERT OR IGNORE INTO enrollments (user_id, course_id) VALUES (?, ?)",
+        (user["id"], course_id)
+    )
+    conn.commit()
+    conn.close()
+
+    return redirect(url_for("index"))
 
 
 #تسجيل الدخول 
@@ -115,8 +147,22 @@ def logout():
 def account():
     if not session.get("user"):
         return redirect(url_for("login"))
-    return render_template("account.html", user=session.get("user"))
 
+    conn = get_db_connection()
+
+    user = conn.execute(
+        "SELECT * FROM users WHERE username = ?", (session["user"],)
+    ).fetchone()
+
+    enrolled_courses = conn.execute("""
+        SELECT courses.* FROM courses
+        JOIN enrollments ON courses.id = enrollments.course_id
+        WHERE enrollments.user_id = ?
+    """, (user["id"],)).fetchall()
+
+    conn.close()
+
+    return render_template("account.html", user=session.get("user"), courses=enrolled_courses)
 
 if __name__ == "__main__":
     app.run(debug=True)

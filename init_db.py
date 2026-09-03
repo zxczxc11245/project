@@ -12,8 +12,9 @@ CREATE TABLE IF NOT EXISTS courses (
 )
 """)
 
-# تنظيف البيانات القديمة لمنع التكرار
+
 cursor.execute("DELETE FROM courses")
+cursor.execute("DELETE FROM sqlite_sequence WHERE name='courses'")
 
 courses_data = [
     (

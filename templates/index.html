@@ -20,7 +20,7 @@
         <div class="login-container">
             {% if session.get('user') %}
                 <div class="user-box">
-                    <a href="{{ url_for('account') }}" class="account_link">
+                    <a href="{{ url_for('account') }}" class="account-link">
                         <img src="{{ url_for('static', filename='ph1.jfif') }}" alt="Profile" class="profile-img">
                     </a>
                     <a href="{{ url_for('logout') }}" class="logout-btn">logout</a>

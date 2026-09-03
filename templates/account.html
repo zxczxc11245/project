@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>account</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
     <div class="account-container">
 
@@ -18,6 +20,24 @@
             <span>Password</span>
             <a href="" class="edit-btn" title="Change password">✎</a>
         </div>
+
+        <div class="section-title">
+            <span>My Courses</span>
+        </div>
+
+        {% if courses %}
+        <div class="enrolled-courses">
+            {% for course in courses %}
+            <a href="{{ url_for('course_detail', course_id=course['id']) }}" class="enrolled-course-card">
+                <img src="{{ course['image_url'] }}" alt="{{ course['title'] }}">
+                <span>{{ course['title'] }}</span>
+            </a>
+            {% endfor %}
+        </div>
+
+        {% else %}
+        <p>You haven't enrolled in any courses yet</p>
+        {% endif %}
 
         <a href="/" class="back-link">Back to Home</a>
 
